@@ -1,0 +1,11 @@
+Fever,Cough,X-ray,ESR,Ausultat,case
+High,Heavy,Flack,Normal,Bubblelike,Pneumonia
+Mediu,Heavy,Flack,Normal,Bubblelike,Pneumonia
+Low,Slight,Spot,Normal,Dry-peep,Pneumonia
+High,Mediu,Flack,Normal,Bubblelike,Pneumonia
+Mediu,Slight,Flack,Normal,Bubblelike,Pneumonia
+Absent,Slight,Strip,Normal,Normal,Pulmonary tuberculosis
+High,Heavy,Hole,Fast,Dry-peep,Pulmonary tuberculosis
+Low,Slight,Strip,Normal,Normal,Pulmonary tuberculosis
+Absent,Slight,Spot,Fast,Dry-peep,Pulmonary tuberculosis
+Low,Mediu,Flack,Fast,Normal,Pulmonary tuberculosis
