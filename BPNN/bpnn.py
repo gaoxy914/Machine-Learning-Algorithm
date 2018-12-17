@@ -64,14 +64,14 @@ class BPNN:
         # update h_o_weights
         for j in range(self.no):
             for i in range(self.nh):
-                delta = output_delta[j] * self.hidden_ouputs[i]
-                self.h_o_weights[j][i] = self.h_o_weights[j][i] + learning_rate * delta + momentum * self.h_o_changes[j][i]
+                delta = learning_rate * output_delta[j] * self.hidden_ouputs[i]
+                self.h_o_weights[j][i] = self.h_o_weights[j][i] + delta + momentum * self.h_o_changes[j][i]
                 self.h_o_changes[j][i] = delta
         # update i_h_weights
         for j in range(self.nh):
             for i in range(self.ni):
-                delta = hidden_delta[j] * self.inputs[i]
-                self.i_h_weights[j][i] = self.i_h_weights[j][i] + learning_rate * delta + momentum *self.i_h_changes[j][i]
+                delta = learning_rate * hidden_delta[j] * self.inputs[i]
+                self.i_h_weights[j][i] = self.i_h_weights[j][i] + delta + momentum *self.i_h_changes[j][i]
                 self.i_h_changes[j][i] = delta
         return sum([0.5 * (t - o)**2 for t, o in zip(targets, self.outputs)])
     
